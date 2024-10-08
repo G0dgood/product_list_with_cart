@@ -1,13 +1,238 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'RedHatText';
+  src: url(./assets/fonts/RedHatText-VariableFont_wght.ttf) format('truetype');
+  font-weight: 400 700; /* Specify the font weights to match the guide */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+:root {
+  /* Colors */
+  --white: white;
+  --red: hsl(14, 86%, 42%);
+  --green: hsl(159, 69%, 38%);
+  --rose-50: hsl(20, 50%, 98%);
+  --rose-100: hsl(13, 31%, 94%);
+  --rose-300: hsl(14, 25%, 72%);
+  --rose-400: hsl(7, 20%, 60%);
+  --rose-500: hsl(12, 20%, 44%);
+  --rose-900: hsl(14, 65%, 9%);
+
+  /* Layout */
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'RedHatText', sans-serif;
+  line-height: 1.3;
+  font-size: 16px; /* Font size for product names */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  background-color: var(--rose-50);
+    overflow: none; 
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select, table {
+  font: inherit;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+@media (max-width: 1200px) {
+  input, button, textarea, select, table {
+    font-size: small;
+  }
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+ 
+
+ 
+h1 {
+  font-size: 2.5rem; /* 40px */
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem; /* 16px */
+  font-weight: 600;
+}
+
+ 
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+  h1 {
+    font-size: 2rem; /* 32px */
+  }
+  h2 {
+    font-size: 1.75rem; /* 28px */
+  }
+  h3 {
+    font-size: 1.5rem; /* 24px */
+  }
+  h4 {
+    font-size: 1.25rem; /* 20px */
+  }
+  h5, h6 {
+    font-size: 1rem; /* 16px */
+  }
+  p {
+    font-size: 0.875rem; /* 14px */
+  }
+}
+
+  
+
+main {
+  grid-area: main;
+  padding: 5rem 5rem;
+  overflow: auto;
+  display: flex;
+  gap: 2rem;
+  
+ 
+}
+
+@media (max-width: 1200px) {
+  main {
+    padding: 2rem 1rem; 
+   	display: flex; 
+				justify-content: center; 
+  }
+}
+@media (max-width: 600px) {
+  main {
+    padding: 2rem 1rem; 
+ 	display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+  }
+
+  .section_two_container{
+ 	width: 100%;
+}
+
+ 
+}
+
+/* Responsive Layout */
+@media (max-width: 375px) {
+  body {
+    font-size: 14px; /* Slightly smaller font size for mobile */
+  }
+}
+
+/* Sample Classes to demonstrate color usage */
+.primary-btn {
+  background-color: var(--red);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.success-message {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.text-rose-dark {
+  color: var(--rose-900);
+}
+
+.text-rose-medium {
+  color: var(--rose-500);
+}
+
+.text-rose-light {
+  color: var(--rose-100);
+}
+
+button {
+  width: 100%;
+  padding: 12px 24px; /* Padding inside the button */
+  background-color: var(--red); /* Primary button color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 12px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Mouse pointer on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+button:hover {
+  background-color: hsla(14, 86%, 42%, 0.915); /* Darker shade on hover */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+button:active {
+  background-color: hsla(14, 86%, 42%, 0.668); /* Active state color */
+  transform: translateY(1px); /* Slight depression effect on click */
+}
+
+button:disabled {
+  background-color: #cccccc; /* Disabled button color */
+  cursor: not-allowed; /* Not-allowed cursor for disabled state */
+}
+
+ 
+
+ /* --- Other CSS Files --- */
+ @import url(./App.css);   
+@import url(./css/Card.css);   
+@import url(./css/bootstrap.css);   
+@import url(./css/Modal.css);   
+   
