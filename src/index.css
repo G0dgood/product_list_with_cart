@@ -214,7 +214,7 @@ button {
 }
 
 button:hover {
-  background-color: hsla(14, 86%, 42%, 0.915); /* Darker shade on hover */
+  background-color: #952C0C; /* Darker shade on hover */
   transform: translateY(-3px); /* Slight lift effect on hover */
 }
 
